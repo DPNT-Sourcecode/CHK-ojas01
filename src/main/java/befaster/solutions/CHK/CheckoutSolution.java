@@ -173,7 +173,7 @@ public class CheckoutSolution {
         }
 
         oferta = s + t + x + y + z;
-        if(oferta > 3) {
+        if(oferta >= 3) {
             for (int var = 0; var < oferta - oferta % 3; var++) {
                 ArrayList<String> lista = new ArrayList<>();
                 if(z > 0){
@@ -217,3 +217,4 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
