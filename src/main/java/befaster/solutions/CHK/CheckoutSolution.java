@@ -15,6 +15,7 @@ public class CheckoutSolution {
         int j = 0;
         int k = 0;
         int lx = 0;
+        int n = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
@@ -39,6 +40,8 @@ public class CheckoutSolution {
                 k++;
             } else if(skus.charAt(i) == 'L' || skus.charAt(i) == 'X') {
                 lx++;
+            } else if(skus.charAt(i) == 'N') {
+                n++;
             } else {
                 return -1;
             }
@@ -102,6 +105,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
