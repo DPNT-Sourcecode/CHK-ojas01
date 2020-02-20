@@ -18,6 +18,8 @@ public class CheckoutSolution {
         int m = 0;
         int n = 0;
         int oy = 0;
+        int p = 0;
+        int q = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
@@ -47,8 +49,12 @@ public class CheckoutSolution {
             } else if(skus.charAt(i) == 'M') {
                 m++;
             } else if(skus.charAt(i) == 'O' || skus.charAt(i) == 'Y') {
-                m++;
-            } else {
+                oy++;
+            } else if(skus.charAt(i) == 'P') {
+                p++;
+            } else if(skus.charAt(i) == 'Q') {
+                q++;
+            }  else {
                 return -1;
             }
         }
@@ -103,6 +109,11 @@ public class CheckoutSolution {
                 m = m - (n / 3);
             }
         }
+        if(p >= 5){
+            suma += (p/5)*200 + (p%5)*50;
+        } else {
+            suma += p*50;
+        }
 
         suma += cgtw*20;
         suma += d*15;
@@ -112,12 +123,14 @@ public class CheckoutSolution {
         suma += lx*90;
         suma += m*15;
         suma += n*40;
+        suma += oy*10;
 
 
 
         return suma;
     }
 }
+
 
 
 
