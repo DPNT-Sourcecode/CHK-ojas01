@@ -193,7 +193,9 @@ public class CheckoutSolution {
                     x--;
                 }
             }
+            suma += (oferta/3) * 45;
         }
+
         suma += cgtw*20;
         suma += d*15;
         suma += e*40;
@@ -215,4 +217,5 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
