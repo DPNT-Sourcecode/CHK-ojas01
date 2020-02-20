@@ -18,6 +18,8 @@ public class CheckoutSolution {
                 c++;
             } else if(skus.charAt(i) == 'D'){
                 d++;
+            } else {
+                return -1;
             }
         }
         if(a >= 3){
@@ -36,5 +38,6 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
