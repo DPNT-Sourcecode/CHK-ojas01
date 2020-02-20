@@ -172,29 +172,29 @@ public class CheckoutSolution {
             suma += v*50;
         }
 
-//        oferta = s + t + x + y + z;
-//        if(oferta > 3) {
-//            for (int var = 0; var < oferta - oferta % 3; j++) {
-//                ArrayList<String> lista = new ArrayList<>();
-//                if(z > 0){
-//                    lista.add("Z");
-//                    z--;
-//                } else if(y > 0){
-//                    lista.add("Y");
-//                    y--;
-//                } else if(t > 0){
-//                    lista.add("T");
-//                    t--;
-//                } else if(s > 0){
-//                    lista.add("S");
-//                    s--;
-//                } else if( x > 0){
-//                    lista.add("X");
-//                    x--;
-//                }
-//            }
-//            suma += (oferta/3) * 45;
-//        }
+        oferta = s + t + x + y + z;
+        if(oferta > 3) {
+            for (int var = 0; var < oferta - oferta % 3; var++) {
+                ArrayList<String> lista = new ArrayList<>();
+                if(z > 0){
+                    lista.add("Z");
+                    z--;
+                } else if(y > 0){
+                    lista.add("Y");
+                    y--;
+                } else if(t > 0){
+                    lista.add("T");
+                    t--;
+                } else if(s > 0){
+                    lista.add("S");
+                    s--;
+                } else if( x > 0){
+                    lista.add("X");
+                    x--;
+                }
+            }
+            suma += (oferta/3) * 45;
+        }
 
         suma += cgtw*20;
         suma += d*15;
@@ -217,6 +217,3 @@ public class CheckoutSolution {
         return suma;
     }
 }
-
-
-
