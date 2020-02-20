@@ -44,15 +44,17 @@ public class CheckoutSolution {
         } else {
             suma += b*30;
         }
+
+        suma += c*20;
+        suma += d*15;
         if(e >= 2){
             suma += e*40 - (e/2)*30;
         } else {
             suma += e*40;
         }
-        suma += c*20;
-        suma += d*15;
 
         return suma;
     }
 }
+
 
