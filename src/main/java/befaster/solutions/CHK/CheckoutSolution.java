@@ -33,8 +33,7 @@ public class CheckoutSolution {
             } else {
                 suma += (a/5)*200 + rest * 50;
             }
-        }
-        if(a >= 3 && a < 5){
+        } else if(a >= 3 && a < 5){
             suma += (a/3)*130 + (a%3)*50;
         } else {
             suma += a*50;
@@ -56,5 +55,6 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
