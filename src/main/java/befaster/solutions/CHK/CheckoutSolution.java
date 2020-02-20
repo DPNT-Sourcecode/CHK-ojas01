@@ -178,11 +178,3 @@ public class CheckoutSolution {
         return suma;
     }
 }
-
-
-
-
-
-
-
-
