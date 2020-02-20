@@ -115,9 +115,9 @@ public class CheckoutSolution {
             suma += h*10;
         }
         if(k >= 2){
-            suma += (k/2)*150 + (k%2)*80;
+            suma += (k/2)*120 + (k%2)*70;
         } else {
-            suma += k*80;
+            suma += k*70;
         }
         if(n >= 3){
             if(m > 0) {
@@ -170,11 +170,12 @@ public class CheckoutSolution {
         suma += n*40;
         suma += oy*10;
         suma += r*50;
-        suma += s*30;
-        suma += z*50;
+        suma += s*20;
+        suma += z*21;
 
 
 
         return suma;
     }
 }
+
