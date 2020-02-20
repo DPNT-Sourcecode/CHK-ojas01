@@ -7,7 +7,7 @@ public class CheckoutSolution {
         int a = 0;
         int b = 0;
         int cgtw = 0;
-        int dm = 0;
+        int d = 0;
         int e = 0;
         int f = 0;
         int h = 0;
@@ -15,7 +15,9 @@ public class CheckoutSolution {
         int j = 0;
         int k = 0;
         int lx = 0;
+        int m = 0;
         int n = 0;
+        int oy = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
@@ -24,8 +26,8 @@ public class CheckoutSolution {
                 b++;
             } else if(skus.charAt(i) == 'C' || skus.charAt(i) == 'G' || skus.charAt(i) == 'T' || skus.charAt(i) == 'W'){
                 cgtw++;
-            } else if(skus.charAt(i) == 'D' || skus.charAt(i) == 'M'){
-                dm++;
+            } else if(skus.charAt(i) == 'D'){
+                d++;
             } else if(skus.charAt(i) == 'E') {
                 e++;
             } else if(skus.charAt(i) == 'F') {
@@ -42,6 +44,10 @@ public class CheckoutSolution {
                 lx++;
             } else if(skus.charAt(i) == 'N') {
                 n++;
+            } else if(skus.charAt(i) == 'M') {
+                m++;
+            } else if(skus.charAt(i) == 'O' || skus.charAt(i) == 'Y') {
+                m++;
             } else {
                 return -1;
             }
@@ -92,19 +98,27 @@ public class CheckoutSolution {
         } else {
             suma += k*30;
         }
+        if(n >= 3){
+            if(m > 0) {
+                m = m - (n / 3);
+            }
+        }
 
         suma += cgtw*20;
-        suma += dm*15;
+        suma += d*15;
         suma += e*40;
         suma += counti*35;
         suma += j*60;
         suma += lx*90;
+        suma += m*15;
+        suma += n*40;
 
 
 
         return suma;
     }
 }
+
 
 
 
