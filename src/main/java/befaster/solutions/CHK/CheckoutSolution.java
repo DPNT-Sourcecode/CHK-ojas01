@@ -112,7 +112,7 @@ public class CheckoutSolution {
         } else if(h >= 5 && h < 10){
             suma += (h/5)*45 + (h%3)*10;
         } else {
-            suma += h*50;
+            suma += h*10;
         }
         if(k >= 2){
             suma += (k/2)*150 + (k%2)*80;
@@ -140,7 +140,7 @@ public class CheckoutSolution {
             suma += q*30;
         }
         if(u >= 4){
-            suma += (u/4)*120 + (u%3)*40;
+            suma += (u/4)*120 + (u%4)*40;
         } else {
             suma += u*40;
         }
@@ -176,6 +176,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
