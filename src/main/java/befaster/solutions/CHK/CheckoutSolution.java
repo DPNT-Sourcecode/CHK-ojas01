@@ -149,6 +149,8 @@ public class CheckoutSolution {
             rest = v%3;
             if(rest >= 3){
                 suma += (v/3)*130 + (rest/2)*90 + (rest%2)*50;
+            } else if(rest==2) {
+                suma += (v/3)*130 + 90;
             } else {
                 suma += (v/3)*130 + rest * 50;
             }
@@ -176,6 +178,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
