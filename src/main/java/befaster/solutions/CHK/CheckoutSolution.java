@@ -25,13 +25,16 @@ public class CheckoutSolution {
         int u = 0;
         int v = 0;
         int z = 0;
+        int t = 0;
+        int x = 0;
+        int y = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
                 a++;
             } else if(skus.charAt(i) == 'B'){
                 b++;
-            } else if(skus.charAt(i) == 'C' || skus.charAt(i) == 'G' || skus.charAt(i) == 'T' || skus.charAt(i) == 'W'){
+            } else if(skus.charAt(i) == 'C' || skus.charAt(i) == 'G' || skus.charAt(i) == 'W'){
                 cgtw++;
             } else if(skus.charAt(i) == 'D'){
                 d++;
@@ -47,13 +50,13 @@ public class CheckoutSolution {
                 j++;
             } else if(skus.charAt(i) == 'K') {
                 k++;
-            } else if(skus.charAt(i) == 'L' || skus.charAt(i) == 'X') {
+            } else if(skus.charAt(i) == 'L') {
                 lx++;
             } else if(skus.charAt(i) == 'N') {
                 n++;
             } else if(skus.charAt(i) == 'M') {
                 m++;
-            } else if(skus.charAt(i) == 'O' || skus.charAt(i) == 'Y') {
+            } else if(skus.charAt(i) == 'O') {
                 oy++;
             } else if(skus.charAt(i) == 'P') {
                 p++;
@@ -69,6 +72,12 @@ public class CheckoutSolution {
                 v++;
             } else if(skus.charAt(i) == 'Z') {
                 z++;
+            } else if(skus.charAt(i) == 'T') {
+                t++;
+            } else if(skus.charAt(i) == 'X') {
+                x++;
+            } else if(skus.charAt(i) == 'Y') {
+                y++;
             } else {
                 return -1;
             }
@@ -172,10 +181,14 @@ public class CheckoutSolution {
         suma += r*50;
         suma += s*20;
         suma += z*21;
+        suma += t*20;
+        suma += x*17;
+        suma += y*20;
 
 
 
         return suma;
     }
 }
+
 
