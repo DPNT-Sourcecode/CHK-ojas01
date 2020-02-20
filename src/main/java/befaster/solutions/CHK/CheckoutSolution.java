@@ -150,7 +150,7 @@ public class CheckoutSolution {
             if(rest >= 3){
                 suma += (v/3)*130 + (rest/2)*90 + (rest%2)*50;
             } else {
-                suma += (a/3)*130 + rest * 50;
+                suma += (v/3)*130 + rest * 50;
             }
         } else if(v >= 2 && v < 3){
             suma += (v/2)*90 + (v%2)*50;
@@ -176,6 +176,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
