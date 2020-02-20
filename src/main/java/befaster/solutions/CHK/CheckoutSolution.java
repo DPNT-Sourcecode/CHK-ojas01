@@ -2,6 +2,8 @@ package befaster.solutions.CHK;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.ArrayList;
+
 public class CheckoutSolution {
     public Integer checkout(String skus) {
         int a = 0;
@@ -29,6 +31,7 @@ public class CheckoutSolution {
         int x = 0;
         int y = 0;
         int suma = 0;
+        int oferta = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
                 a++;
@@ -169,6 +172,28 @@ public class CheckoutSolution {
             suma += v*50;
         }
 
+        oferta = s + t + x + y + z;
+        if(oferta > 3) {
+            for (int var = 0; var < oferta - oferta % 3; j++) {
+                ArrayList<String> lista = new ArrayList<>();
+                if(z > 0){
+                    lista.add("Z");
+                    z--;
+                } else if(y > 0){
+                    lista.add("Y");
+                    y--;
+                } else if(t > 0){
+                    lista.add("T");
+                    t--;
+                } else if(s > 0){
+                    lista.add("S");
+                    s--;
+                } else if( x > 0){
+                    lista.add("X");
+                    x--;
+                }
+            }
+        }
         suma += cgtw*20;
         suma += d*15;
         suma += e*40;
@@ -190,3 +215,4 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
