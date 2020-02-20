@@ -38,6 +38,10 @@ public class CheckoutSolution {
         } else {
             suma += a*50;
         }
+        if(e >= 2){
+            b = b - (e/2);
+        }
+        suma += e*40;
         if(b >= 2){
             suma += (b/2)*45 + (b%2)*30;
         } else {
@@ -46,15 +50,11 @@ public class CheckoutSolution {
 
         suma += c*20;
         suma += d*15;
-        if(e >= 2){
-            suma += e*40 - (e/2)*30;
-        } else {
-            suma += e*40;
-        }
 
         return suma;
     }
 }
+
 
 
 
