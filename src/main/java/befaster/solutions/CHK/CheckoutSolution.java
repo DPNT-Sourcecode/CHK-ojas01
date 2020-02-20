@@ -6,8 +6,8 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         int a = 0;
         int b = 0;
-        int c = 0;
-        int d = 0;
+        int cgtw = 0;
+        int dm = 0;
         int e = 0;
         int f = 0;
         int suma = 0;
@@ -16,10 +16,10 @@ public class CheckoutSolution {
                 a++;
             } else if(skus.charAt(i) == 'B'){
                 b++;
-            } else if(skus.charAt(i) == 'C'){
-                c++;
-            } else if(skus.charAt(i) == 'D'){
-                d++;
+            } else if(skus.charAt(i) == 'C' || skus.charAt(i) == 'G' || skus.charAt(i) == 'T' || skus.charAt(i) == 'W'){
+                cgtw++;
+            } else if(skus.charAt(i) == 'D' || skus.charAt(i) == 'M'){
+                dm++;
             } else if(skus.charAt(i) == 'E') {
                 e++;
             } else if(skus.charAt(i) == 'F') {
@@ -57,8 +57,8 @@ public class CheckoutSolution {
             suma += f*10;
         }
 
-        suma += c*20;
-        suma += d*15;
+        suma += cgtw*20;
+        suma += dm*15;
         suma += e*40;
 
 
@@ -66,3 +66,4 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
