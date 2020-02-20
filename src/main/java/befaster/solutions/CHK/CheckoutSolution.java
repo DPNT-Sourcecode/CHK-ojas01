@@ -9,6 +9,7 @@ public class CheckoutSolution {
         int c = 0;
         int d = 0;
         int e = 0;
+        int f = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
@@ -21,6 +22,8 @@ public class CheckoutSolution {
                 d++;
             } else if(skus.charAt(i) == 'E') {
                 e++;
+            } else if(skus.charAt(i) == 'F') {
+                f++;
             } else {
                 return -1;
             }
@@ -48,6 +51,11 @@ public class CheckoutSolution {
         } else {
             suma += b*30;
         }
+        if(f >= 3){
+            suma += (f/3)*20 + (f%3)*10;
+        } else {
+            suma += f*10;
+        }
 
         suma += c*20;
         suma += d*15;
@@ -58,4 +66,5 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
