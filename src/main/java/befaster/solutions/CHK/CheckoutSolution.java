@@ -110,7 +110,7 @@ public class CheckoutSolution {
                 suma += (h/10)*80 + rest * 10;
             }
         } else if(h >= 5 && h < 10){
-            suma += (h/5)*45 + (h%3)*10;
+            suma += (h/5)*45 + (h%5)*10;
         } else {
             suma += h*10;
         }
@@ -176,6 +176,7 @@ public class CheckoutSolution {
         return suma;
     }
 }
+
 
 
 
