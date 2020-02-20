@@ -11,6 +11,9 @@ public class CheckoutSolution {
         int e = 0;
         int f = 0;
         int h = 0;
+        int counti = 0;
+        int j = 0;
+        int k = 0;
         int suma = 0;
         for(int i = 0; i < skus.length(); i++){
             if(skus.charAt(i) == 'A'){
@@ -27,7 +30,13 @@ public class CheckoutSolution {
                 f++;
             } else if(skus.charAt(i) == 'H') {
                 h++;
-            }else {
+            } else if(skus.charAt(i) == 'I') {
+                counti++;
+            } else if(skus.charAt(i) == 'J') {
+                j++;
+            } else if(skus.charAt(i) == 'K') {
+                k++;
+            } else {
                 return -1;
             }
         }
@@ -76,11 +85,14 @@ public class CheckoutSolution {
         suma += cgtw*20;
         suma += dm*15;
         suma += e*40;
+        suma += counti*35;
+        suma += j*60;
 
 
 
         return suma;
     }
 }
+
 
 
